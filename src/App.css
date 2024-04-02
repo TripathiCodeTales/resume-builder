@@ -1,38 +1,571 @@
-.App {
-  text-align: center;
-}
+/* .App{
+  /* padding:5%;
+  margin-left: 10%;
+  margin-right: 10%; */
+  /* border:1px solid #389696; */
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .view{
+  margin:4%;
   }
+.resumeview{
+  border:1px solid #389696;
+  padding:5%;
+}
+.header{
+height:20%;
+display:flex;
+margin-bottom: 2%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inBlock{
+  display: inline-block;
+  margin-bottom:-6px;
+}
+.basicinfo a {
+  margin-right: 5pxp
+}
+.map {
+  margin: 0;
+}
+
+.linked{
+  margin-left: 4px;
+}
+img{
+  border-radius: 50%;
+  background-color: black;
+  height: 1%;
+  width:10%;
+  margin-right: 2%;
+}
+
+.detail{
+  padding-left: 0%;
+ margin-top:0%;
+ padding-top:0%;
+font-size:24px;
+font-weight: 300;
+}
+
+h2,h5{
+  margin: 0%;
+  font-weight:400;
+}
+
+.basicinfo{
+  align-self: flex-end;
+  text-align:right;
+  margin-left: auto;
+}
+
+.info{
+  padding-top: 2%;
+  display: flex;
+}
+.title{
+  color:black;
+  font-size: 20px;
+  font-weight:bold;
+  border-bottom: 2px solid #389696;
+  padding-top: 2%;
+}
+
+.col-left{
+  width:50%;
+}
+.experience{
+  width:90%;
+  padding-bottom: 1%;
+  margin-bottom: 10%;
+}
+
+.personalprojects{
+  width:90%;
+  padding-bottom: 1%;
+}
+
+.education{
+  width:90%;
+  padding-bottom: 1%;
+}
+
+.col-right{
+  width: 50%;
+  padding-bottom: 1%;
+}
+.skills{
+  margin-bottom: 15%;
+  
+}
+
+.certificates{
+  margin-top: 10px;
+  margin-bottom: 15%;
+}
+.Languages{
+  margin-bottom: 15%;
+  display: flex;
+  flex-direction:column;
+
+}
+
+.skillData{
+  margin-left: 2%;
+  margin: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.skillitem{
+  margin: 1%;
+  border: 1px solid grey;
+  padding: 1%;
+  margin-bottom: 2%;
+  border-radius: 6%;
+  color:#fff;
+  font-size: smaller;
+  padding-left: 3%;
+  padding-right: 4%;
+}
+
+h4{
+  margin-bottom: 0%;
+  margin-top: 3%;
+  font-size:20px;
+}
+
+.experience h5{
+  font-weight: 500;
+  font-size: medium;
+}
+
+.color{
+  color:#389696;
+
+}
+
+.italic{
+  font-style: italic;
+  font-size:small;
+}
+
+.workplace{
+  display: flex;
+ justify-content: space-between;
+ margin:0;
+}
+
+.place{
+  margin:1%;
+  margin-left: 0%;
+}
+
+.lang{
+  display: flex;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+.personalprojects h5{
+  margin-top: 3%;
+  font-size:15px;
+}
+
+ul{
+  margin-top: 0%;
+  padding-left: 1%;
+}
+li {
+  list-style-type: none;
+  
+}
+  
+.calendate{
+  display: flex;
+ flex-direction: column;
+ height:15px;
+ margin-bottom:20px;
+}
+
+.icon{
+  font-size: 24px;
+  font-weight: 400;
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.prof{
+  margin: 0.5%;
+  font-size: 14px;
+}
+
+.langcontainer{
+  width:50%;
+  margin-top: 3%;
+}
+
+.align{
+ float: right;
+}
+
+.head{
+  font-size: medium;
+  margin-top: 10px;
+}
+
+.content{
+  font-size:13px;
+  line-height: 140%;
+}
+
+.dash{
+  font-weight:bold;
+  padding-right:1%
+}
+.font{
+  font-size:15px;
+}
+
+
+.fo{
+  color:grey;
+}
+
+/* formfield */
+
+.App{
+  margin:15%;
+  padding:0;
+  height:100vh;
+  margin-top: 5%;
+  margin-left: 7%;
+  margin-right:7%;
+  margin-bottom: 20%;
+}
+.theform{
+border:1px solid #fff;
+margin-top: 3%;
+color:black;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+.group{
+  display: flex;
+ height:100px;
+ width:100%;
+ flex-wrap: nowrap;
+
+} 
+.input-group{
+  width:40%;
+  margin-left: 5%;
+  margin-right: 4%;
+}
+
+
+.textbox{
+   /* display: flex; */
+  height:50px;
+  min-width: 0;
+  flex-direction: column;
+  width:100%;
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
+}
+
+.inputVal, select{
+ /* display: flex;
+ flex-direction: row;
+ width:100%;
+ height:100px;
+ border:1px solid #E0E0E0;
+ border-radius: 5px;
+ background-color: #F0F5FF;
+ margin-bottom: 2%; */
+ width: 100%;
+ height: 100%;
+ outline: none;
+ border: 1px #f3f3f3 solid;
+ padding-left: 20px;
+ vertical-align: middle;
+ font-family: 'Open Sans';
+ font-size: 1rem;
+ font-weight: 400;
+}
+
+.heading{
+  margin-left: 4%;
+  margin-bottom: 3%;
+}
+h3 {
+  position: relative;
+  font-family: "Open Sans Condensed", sans-serif;
+
+}
+
+.heading {
+  margin-top: 10px;
+}
+
+.heading span {
+  background: #fff;
+  padding: 0 20px;
+  position: relative;
+  z-index: 5;
+}
+/* button{
+  height: 40px;
+  width: 40%;
+  margin-top: 35px;
+  margin-left: 33px;
+  border: none;
+  background-color: #fff;
+  color:#389696;
+  font-weight:bold;
+  font-size: 16px;
+} */
+
+/* button:hover{
+  background-color:  #F0F5FF;
+  
+} */
+
+/* languageform */
+
+.langform{
+  width: 100%; 
+  display: flex;
+ margin-right: 50%;
+ flex-wrap: wrap;
+}
+
+
+.addlang{
+ margin-bottom: 2%;
+ margin-top: 0%;
+ margin-left:4%;
+}
+
+.languageform{
+  height:100px;
+  width:100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  margin-left: 10%;
+  }
+
+select{
+  height:50px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
+ border: 1px #f3f3f3 solid;
+ border-radius: 6px;
+}
+options{
+  box-shadow: 0 0 8px rgba(0,0,0,.25);
 }
 
-.App-link {
-  color: #61dafb;
+
+.box{
+  border: 1px solid #F0F5FF;
+  height:20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.langKnownData {
+  display: flex;
+  flex-direction: column;
+  border:1px solid #fff;
+  margin:25px;
+  margin-left: 44px;
+  margin-right: 44px;
+  /* height: 45px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.skillForm{
+  display: flex;
+  flex-direction: row;
+  border:1px solid #fff;
+}
+.skillContainer{
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* margin:4%; */
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+.skill-box{
+  font-size: 16px;
+  padding: 5px 5px 0px 5px;
+  color: black;
+  box-shadow: 0 0 8px rgba(0,0,0,.25);
+  margin-top: 2%;
+  margin-left: 2%;
+  color:white;
+  font-weight: 400;
+  height:30px;
+  margin-bottom: 2%;
+  --tw-bg-opacity: 1;
+  background-color: #389696;
+  border-radius: 5px;
+}
+  
+
+
+.skill-box:first-child {
+  margin-left: 4%; /* Remove margin for the first box */
+}
+.box-data{
+  font-size: 16px;
+  padding: 5px;
+  color: #080909;
+  height: 45px;
+  padding-left: 25px;
+  text-align: center;
+  display: flex;
+  place-items: center;
+  margin-left: 2.5%;
+  font-style: oblique;
+}
+
+.box-lang{
+  font-size: 16px;
+  font-weight: 400;
+  font-style: oblique;
+  margin-right: 3px;
+  color:#389696;
+  /* margin-right: 5px; */
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+.input-box-val{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* calenderDate */
+
+input{
+  display: flex;
+  height:40px;
+  height:40px;
+  border:1px solid #E0E0E0;
+ border-radius: 5px;
+ /* background-color: hsl(220, 100%, 97%); */
+ font-size: 14px;
+ flex-wrap: nowrap;
+}
+
+.area{
+  width:87%;
+ 
+}
+
+.textdes{
+  margin-left: 5%;
+  width:87%;
+  margin-bottom: 2%;
+  box-shadow: 0 0 8px rgba(0,0,0,.25);
+ }
+
+ .datebegin{
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+ 
+ }
+ .datebox{
+  margin-left: 4.5%;
+  color:#389696;
+  font-style: oblique;
+  margin-bottom: 1%;
+ }
+
+.descrip{
+  height:30px;
+  margin-top: 30px;
+  margin-left:5%;
+  width: 90%;
+}
+
+.desbox{
+  text-overflow:ellipsis;
+  overflow: hidden;
+ white-space: nowrap;
+  width:70%;
+  height:40px;
+  padding:5px;
+  margin-bottom: 10px;
+  margin-left:4.5%;
+  color:darkgray;
+  /* box-sizing: border-box; */
+  /* width: 100%;
+margin-right:0; */
+}
+
+.color-black{
+  color:black;
+}
+.group-cut{
+  display: flex;
+ height:100px;
+ width:100%;
+ flex-wrap: nowrap;
+ 
+} 
+
+.datedata{
+ padding-left: 45px;
+ margin-bottom: 2%;
+ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ box-shadow: 0 0 10px rgba(0,0,0,.25);
+ font-size: 16px;
+ 
+}
+.date-data{
+  margin-left: 5%;
+  
+
+}
+.input-lab{
+  width: 400px;
+  height: 60px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,.25);
+}
+
+.data-date{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  text-align: center;
+  margin-left: 4%;
+}
+
+
+.city{
+  flex-wrap: nowrap;
+  margin-left: 5%;
+}
+
+.btn-wrapper{
+  width: 100%;
+ margin:4%;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.prof{
+  width:42%;
 }
