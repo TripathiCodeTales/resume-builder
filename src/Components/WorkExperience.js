@@ -2,7 +2,6 @@ import React from "react";
 import Title from "../SubComponents/Title";
 
 const WorkExperience = ({ experiences }) => {
-  console.log(experiences)
   return (
     <div className="experience">
       <Title title="WORK EXPERIENCE" />

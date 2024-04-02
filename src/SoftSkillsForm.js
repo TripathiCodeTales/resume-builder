@@ -30,7 +30,6 @@ const handleSubmit = () => {
   };
 
 
-console.log(resume)
   return (
     <div className="theform" onSubmit={handleSubmit}>
       <FormHeader title="Soft Skill" />

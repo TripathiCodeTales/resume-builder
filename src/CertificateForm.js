@@ -24,14 +24,12 @@ const CertificateForm = () => {
     const temp = [...certificateAdd];
     temp[index].startDate = value.toString();
     setCertificateAdd(temp);
-    console.log(value, index);
   };
 
   const handleEndDateChange = (value, index) => {
     const temp = [...certificateAdd];
     temp[index].endDate = value.toString();
     setCertificateAdd(temp);
-    console.log(value, index);
   };
   const handleChildClick = () => {
     setCertificateAdd([

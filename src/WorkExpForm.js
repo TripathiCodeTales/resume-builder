@@ -63,14 +63,12 @@ const WorkExpForm = () => {
     const temp = [...expAdd];
     temp[index].startDate = value.toString();
     setExpAdd(temp);
-    console.log(value, index);
   };
 
   const handleEndDateChange = (value, index) => {
     const temp = [...expAdd];
     temp[index].endDate = value.toString();
     setExpAdd(temp);
-    console.log(value, index);
   };
 
   return (

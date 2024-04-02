@@ -21,7 +21,6 @@ const PersonalInfo = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // console.log(commonName);
     setResume({
       ...resume,
       personalDetails: {
@@ -36,12 +35,10 @@ const PersonalInfo = () => {
       },
     });
   };
-//   console.log(setResume);
   const handleInputChange = (name, value) => {
     setcommonName({ ...commonName, [name]: value });
   };
 
-  console.log(resume)
 
   return (
     <div>

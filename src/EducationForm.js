@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import EduData from "./EduData";
 import Button from "./Button/Button";
-// import HeadingF from "./SubComponents/FormHeader";
 import FormHeader from "./SubComponents/FormHeader";
 import { useContext } from "react";
 import AppContext from "./Context/AppContext";
@@ -13,7 +12,6 @@ const EducationForm = () => {
   const [submit, setSubmit] = useState(false);
 
   const handleSubmit = () => {
-    console.log("date " + education);
     setResume({
       ...resume,
       education: [...education],
@@ -56,14 +54,12 @@ const EducationForm = () => {
     const temp = [...education];
     temp[index].startDate = value.toString();
     setEducation(temp);
-    console.log(value, index);
   };
 
   const handleEndDateChange = (value, index) => {
     const temp = [...education];
     temp[index].endDate = value.toString();
     setEducation(temp);
-    console.log(value, index);
   };
   return (
     <div className="theform" onSubmit={handleSubmit}>

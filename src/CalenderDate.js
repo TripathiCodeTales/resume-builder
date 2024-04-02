@@ -10,7 +10,6 @@ const CalenderDate = ({ placeholder, handleDate }) => {
     setStartDate(newDate);
     if (handleDate) {
       handleDate(newDate);
-      console.log(newDate)
     }
   };
 
