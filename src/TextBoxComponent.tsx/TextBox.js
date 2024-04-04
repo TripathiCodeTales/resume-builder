@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TextBox = ({ name, onChange, type, onType }) => {
+const TextBox = ({ name, onChange, type }) => {
   const [value, setValue] = useState("");
 
   const handleOnChange = (e) => {

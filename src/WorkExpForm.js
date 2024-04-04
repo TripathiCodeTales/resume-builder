@@ -24,7 +24,7 @@ const WorkExpForm = () => {
         jobtitle: "",
         employer: "",
         startDate: "",
-        endDate:"",
+        endDate: "",
         city: "",
         description: "",
       },
@@ -52,9 +52,11 @@ const WorkExpForm = () => {
 
   const handleDescriptionChange = (value, index) => {
     const temp = [...expAdd];
-    let newvalue = value.toString().replace( /(^|\. *)([a-z])/g, function(match, separator, char) {
+    let newvalue = value
+      .toString()
+      .replace(/(^|\. *)([a-z])/g, function (match, separator, char) {
         return separator + char.toUpperCase();
-    })
+      });
     temp[index].description = newvalue;
     setExpAdd(temp);
   };
@@ -80,18 +82,20 @@ const WorkExpForm = () => {
             <div className="box-data">
               <span className="box-lang">
                 {item.jobtitle ? item.jobtitle : "(Not specified)"}
-                </span>
+              </span>
               {item.employer ? `(${item.employer}),` : null}
-              
+
               <div className="city">
                 {item.city.charAt(0).toUpperCase() + item.city.slice(1)}
               </div>
             </div>
             <div className="datebox">
-            {item.startDate && item.endDate ?
-            new Date(item.startDate).toLocaleDateString() + " - " +
-              new Date(item.endDate).toLocaleDateString(): null}
-              </div>
+              {item.startDate && item.endDate
+                ? new Date(item.startDate).toLocaleDateString() +
+                  " - " +
+                  new Date(item.endDate).toLocaleDateString()
+                : null}
+            </div>
             <div className="desbox">{item.description}</div>
             {index + 1 === expAdd.length && (
               <EduData

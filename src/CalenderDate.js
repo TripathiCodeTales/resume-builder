@@ -17,12 +17,9 @@ const CalenderDate = ({ placeholder, handleDate }) => {
     <div className="date-data">
       <DatePicker
         selected={startDate}
-        // onChange={(date) => setStartDate(date)}
         onChange={handleDateChange}
-        // showMonthYearPicker
         className="datedata"
         placeholderText={placeholder}
-        // dateFormat="MM/yyyy"
       />
     </div>
   );

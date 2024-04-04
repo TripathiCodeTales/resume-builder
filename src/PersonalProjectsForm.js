@@ -7,21 +7,18 @@ import AppContext from "./Context/AppContext";
 
 const PersonalProjectsForm = () => {
   const [projectsAdd, setProjectsAdd] = useState([]);
-  const {resume,setResume}= useContext(AppContext);
-  const [submit,setSubmit]= useState(false);
+  const { resume, setResume } = useContext(AppContext);
+  const [submit, setSubmit] = useState(false);
 
   const handleSubmit = () => {
     setResume({
-      ...resume, 
-      PersonalProjects:[...projectsAdd],
+      ...resume,
+      PersonalProjects: [...projectsAdd],
     });
-  }
+  };
 
   const handleChildClick = () => {
-    setProjectsAdd([
-      ...projectsAdd,
-      { title: "", description: ""},
-    ]);
+    setProjectsAdd([...projectsAdd, { title: "", description: "" }]);
     setSubmit(true);
   };
 
@@ -32,18 +29,22 @@ const PersonalProjectsForm = () => {
   };
   const handleDescriptionChange = (value, index) => {
     const temp = [...projectsAdd];
-    let newvalue = value.toString().replace( /(^|\. *)([a-z])/g, function(match, separator, char) {
-      return separator + char.toUpperCase();
-  })
+    let newvalue = value
+      .toString()
+      .replace(/(^|\. *)([a-z])/g, function (match, separator, char) {
+        return separator + char.toUpperCase();
+      });
     temp[index].description = newvalue;
     setProjectsAdd(temp);
   };
 
   const handleOnSkillsChange = (value, index) => {
     const temp = [...projectsAdd];
-   let newvalue = value.toString().replace( /(^|\. *)([a-z])/g, function(match, separator, char) {
-      return separator + char.toUpperCase();
-  })
+    let newvalue = value
+      .toString()
+      .replace(/(^|\. *)([a-z])/g, function (match, separator, char) {
+        return separator + char.toUpperCase();
+      });
     temp[index].description = newvalue;
     setProjectsAdd(temp);
   };
@@ -74,20 +75,16 @@ const PersonalProjectsForm = () => {
           </div>
         );
       })}
-       <div className="btn-container">
-      <div className="btn-wrapper">
-        <Button
-          value="+ Add Personal Projects"
-          onChildClick={handleChildClick}
-        />
-      </div>
-      <div className="btn-wrapper">
-      {
-        submit && (
-            <Submit onSubmit={handleSubmit} value="submit"  />
-        )
-      }
-    </div>
+      <div className="btn-container">
+        <div className="btn-wrapper">
+          <Button
+            value="+ Add Personal Projects"
+            onChildClick={handleChildClick}
+          />
+        </div>
+        <div className="btn-wrapper">
+          {submit && <Submit onSubmit={handleSubmit} value="submit" />}
+        </div>
       </div>
     </div>
   );

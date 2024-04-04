@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import EduData from "./EduData";
 import Button from "./Button/Button";
 import FormHeader from "./SubComponents/FormHeader";
@@ -6,20 +6,16 @@ import Submit from "./Button/Submit";
 import AppContext from "./Context/AppContext";
 
 const CertificateForm = () => {
-  // const {resume,setResume} = useContext({AppContext})
   const [certificateAdd, setCertificateAdd] = useState([]);
-  const [submit,setSubmit] = useState(false);
-  const {resume,setResume} = useContext(AppContext);
+  const [submit, setSubmit] = useState(false);
+  const { resume, setResume } = useContext(AppContext);
 
   const handleSubmit = () => {
-   setResume({
-    ...resume,
-      certification:
-  [
-    ...certificateAdd
-  ]
-   })
-  }
+    setResume({
+      ...resume,
+      certification: [...certificateAdd],
+    });
+  };
   const handleStartDateChange = (value, index) => {
     const temp = [...certificateAdd];
     temp[index].startDate = value.toString();
@@ -34,7 +30,7 @@ const CertificateForm = () => {
   const handleChildClick = () => {
     setCertificateAdd([
       ...certificateAdd,
-      { courses: "", institutions: "", startDate:"",endDate:""},
+      { courses: "", institutions: "", startDate: "", endDate: "" },
     ]);
     setSubmit(true);
   };
@@ -58,17 +54,17 @@ const CertificateForm = () => {
           <div className="langKnownData">
             <div className="box-data">
               <span className="box-lang">
-                {item.courses ? item.courses : "(Not specified)"} 
-                </span>
-                {item.institutions  ?  `(${item.institutions})`
-                  : null}
-              
+                {item.courses ? item.courses : "(Not specified)"}
+              </span>
+              {item.institutions ? `(${item.institutions})` : null}
             </div>
             <div className="datebox">
-            {item.startDate && item.endDate ?
-            new Date(item.startDate).toLocaleDateString() + "-" +
-              new Date(item.endDate).toLocaleDateString(): null}
-              </div>
+              {item.startDate && item.endDate
+                ? new Date(item.startDate).toLocaleDateString() +
+                  "-" +
+                  new Date(item.endDate).toLocaleDateString()
+                : null}
+            </div>
             {index + 1 === certificateAdd.length && (
               <EduData
                 handleSchoolChange={handleOnCourseChange}
@@ -85,17 +81,13 @@ const CertificateForm = () => {
         );
       })}
       <div className="btn-container">
-      <div className="btn-wrapper">
-        <Button value="+ Add Certificate" onChildClick={handleChildClick} />
+        <div className="btn-wrapper">
+          <Button value="+ Add Certificate" onChildClick={handleChildClick} />
+        </div>
+        <div className="btn-wrapper">
+          {submit && <Submit onSubmit={handleSubmit} value="submit" />}
+        </div>
       </div>
-      <div className="btn-wrapper">
-      {
-        submit && (
-            <Submit onSubmit={handleSubmit} value="submit" />
-        )
-      }
-    </div>
-    </div>
     </div>
   );
 };

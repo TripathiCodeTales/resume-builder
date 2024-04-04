@@ -2,29 +2,24 @@ import React, { useContext, useState } from "react";
 import FormHeader from "./SubComponents/FormHeader";
 import Submit from "./Button/Submit";
 import AppContext from "./Context/AppContext";
-import Button from "./Button/Button";
 
 const ProfessionalSummaryForm = () => {
-const [profSummary, setProfSummary] = useState([])
-const {resume,setResume} = useContext(AppContext);
-const [submit,setSubmit] = useState(false);
+  const [profSummary, setProfSummary] = useState([]);
+  const { resume, setResume } = useContext(AppContext);
+  const [submit, setSubmit] = useState(false);
 
-const handleSubmit = () => {
+  const handleSubmit = () => {
     setResume({
       ...resume,
       ProfessionalSummary: [...profSummary],
     });
   };
-  const handleChildClick = () => {
-    setProfSummary([...profSummary]);
-    setSubmit(true);
-  };
 
- const handleDescriptionChange = (event) => {
-const temp = [...profSummary];
- temp.description = event.target.value
-setProfSummary(temp);
- };
+  const handleDescriptionChange = (event) => {
+    const temp = [...profSummary];
+    temp.description = event.target.value;
+    setProfSummary(temp);
+  };
 
   return (
     <div className="theform" onSubmit={handleSubmit}>
@@ -38,17 +33,22 @@ setProfSummary(temp);
           best qualities and skills.
         </h5>
 
-        <textarea className="inputVal textdes" rows="05" onChange={(event) => handleDescriptionChange(event)}>
+        <textarea
+          className="inputVal textdes"
+          rows="05"
+          onChange={(event) => handleDescriptionChange(event)}
+        >
           Enter your Professional summary here...
         </textarea>
       </div>
       <div className="btn-container">
         <div className="btn-wrapper prof">
-          {submit && <Submit onSubmit={handleSubmit} value="submit" type = "submit"/>}
+          {submit && (
+            <Submit onSubmit={handleSubmit} value="submit" type="submit" />
+          )}
         </div>
       </div>
     </div>
-    
   );
 };
 

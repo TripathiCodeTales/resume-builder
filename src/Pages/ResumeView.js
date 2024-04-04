@@ -9,8 +9,6 @@ import SoftSkills from "../Components/SoftSkills";
 import { useContext } from "react";
 import AppContext from "../Context/AppContext";
 
-
-
 function ResumeView() {
 const {resume} = useContext(AppContext);
   return (
